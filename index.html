@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Personal Framework</title>
+    <meta name="description" content="This is my Sassy Base site" />
+
+    <!-- FOR MOBILE / SMALL SCREENS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FOR IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- ADOBE FONTS -->
+    <link rel="stylesheet" href="https://use.typekit.net/dey5rol.css">
+
+    <!-- MAIN CSS FILE -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+
+        <div class="site-id">
+            <div class="logo">
+                <a href="#"><img src="img/tzdlogowht.png" alt="TZD Square Logo" srcset="">
+            </div></a>
+            <a href="#">
+                <h1 class="hide-visually"><a href="#">My Framework</h1>
+            </a>
+        </div>
+
+        <nav class="site-nav" data-navstate="closed">
+            <button class="menu-button"><span class="hide-visually">Menu</span>
+                <svg width="30" height="30">
+                    <title>Menu</title>
+                    <rect id="bar-top" y="0" width="30" height="3"></rect>
+                    <rect id="bar-middle" y="8" width="30" height="3"></rect>
+                    <rect id="bar-botton" y="16" width="30" height="3"></rect>
+                </svg>
+            </button>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Subpage</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main class="site-main">
+
+        <section class="hero animate-on-scroll">
+            <div class="container">
+                <h1>Tre Zamora's Framework</h1>
+                <p>This is a simple, multipage website, built with SASS</p>
+                <a href="#section1" class="button">Go to Section 1</a>
+                <a href="#section2" class="button">Go to Section 2</a>
+                <a href="#section3" class="button">Go to Section 3</a>
+            </div>
+        </section>
+
+        <section id="section1" class="animate-on-scroll">
+
+            <div class="container">
+                <div class="row">
+                    <div class="one-half animate-drop-delay">
+                        <img src="img/placeholder-1500x1500.gif" width="1500" height="1500" alt="Placeholder" srcset="">
+                    </div>
+                    <div class="one-half">
+                        <h3>Heading 3</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, quia. Perspiciatis iure rerum
+                            delectus
+                            sit, quis aliquam neque repellat doloribus ratione hic ad cum. A accusantium quis libero
+                            impedit
+                            quod.</p>
+                        <a href="#" class="button">Click Click</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section2" class="animate-on-scroll">
+
+            <div class="container">
+
+                <div class="row swap">
+                    <div class="one-half">
+                        <img class="animate-scale-in" src="img/placeholder-1500x800.gif" width="1500" height="1500"
+                            alt="Placeholder" srcset="">
+                    </div>
+                    <div class="one-half">
+                        <h3>Heading 3</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, quia. Perspiciatis iure rerum
+                            delectus
+                            sit, quis aliquam neque repellat doloribus ratione hic ad cum. A accusantium quis libero
+                            impedit
+                            quod.</p>
+                        <a href="#" class="button animate-scale-in">Click Click</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section3" class="animate-on-scroll">
+
+            <div class="container">
+                <div class="row stack">
+                    <div class="one-half animate-scale-in">
+                        <img src="img/placeholder-1500x800.gif" width="1500" height="1500" alt="Placeholder" srcset="">
+                    </div>
+                    <div class="one-half animate-slide-up">
+                        <h3>Heading 3</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, quia. Perspiciatis iure rerum
+                            delectus
+                            sit, quis aliquam neque repellat doloribus ratione hic ad cum. A accusantium quis libero
+                            impedit
+                            quod.</p>
+                        <a href="#" class="button">Click Click</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <nav class="site-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="subpade.html">Subpage</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <!-- SMOOTH SCROLL JS FILE CHRIS F -->
+    <script src="js/smooth-scroll.polyfills.min.js"></script>
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]', {
+            speed: 800,
+            speedAsDuration: true
+        });
+    </script>
+
+    <!-- MAIN JAVASCRIPT -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
