@@ -3,16 +3,16 @@
 .button,
 button {
     display: inline-block;
-    background-color: $color-link;
-    color: white;
+    background-color: $color-neutral-light;
+    color: $color-neutral-dark;
     text-decoration: none;
     padding: 1em;
     border-radius: .5em;
     margin: 1em .5em 1em 0;
 
     &:hover {
-        color: white;
-        background-color: $color-link-darker;
+        color: $color-neutral-light;
+        background-color: $color-neutral-dark;
         border-radius: 1em;
         transition: ease-in 250ms;
     }

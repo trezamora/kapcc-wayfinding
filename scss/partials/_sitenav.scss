@@ -1,39 +1,46 @@
 /* SITE-HEADER SITE-NAV SITE-NAV */
-/* SITE STRUCTURE */
 
-.site-header {
+.side-nav {
+    padding-top: 3em;
+    padding-bottom: 2em;
+    width: 250px;
+    min-height: 100vh;
+    background-color: $color-neutral-light;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
 
-    .bar-nav {
-        width: 15%;
-        min-height: 100vh;
-        position: fixed;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        justify-content: space-between;
-        background-color: rgba(246, 246, 246, 1);
-        padding-top: 2em;
+    nav {
+        max-width: 175px;
 
-        nav ul {
-            padding: 0;
+        h2 {
+            color: $color-neutral-dark;
         }
 
-        nav li {
+        li {
             list-style: none;
         }
 
-        nav li a {
-            text-decoration: none;
-            color: $color-text-headings;
-            display: block;
-            padding: 1em 0;
-            font-weight: 400;
-            transition: all ease-out 250ms;
+        ul {
+            padding: 0;
         }
+    }
 
-        nav li a:hover {
-            color: $color-dark-accent;
+    nav li a {
+        text-decoration: none;
+        color: $color-neutral-dark;
+        display: block;
+        text-align: left;
+        padding: 1em 0;
+        font-size: 1rem;
+        font-weight: 400;
+        transition: all ease-out 250ms;
+
+        &:hover {
+            color: $color-main-b4;
         }
     }
 }

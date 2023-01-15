@@ -4,17 +4,15 @@
 }
 
 // VARIABLES
-$color-text-body: rgba(0, 0, 0, .8);
-$color-text-headings: rgba(0, 0, 0, 1);
-$color-accent: rgb(226, 239, 124);
-$color-link: rgb(195, 202, 143);
-$color-link-darker: rgb(164, 171, 104);
-$color-light-accent: rgb(0, 237, 103);
-$color-dark-accent: rgb(27, 41, 237);
+$color-neutral-dark: rgba(35, 31, 32, 1);
+$color-neutral-light: rgba(244, 244, 245, 1);
+$color-main-b1: rgba(2, 48, 71, 1);
+$color-main-b2: rgba(0, 84, 164, 1);
+$color-main-b3: rgba(33, 158, 188, 1);
+$color-main-b4: rgba(142, 202, 230, 1);
 
 
-$font-family-sans: 'forma-djr-micro', Helvetica, Arial, sans-serif;
-$font-family-serif: 'utopia-std', serif;
+$font-family-sans: 'sofia-pro', Helvetica, sans-serif;
 
 // BREAKPOINTS
 $breakpoint-small: 768px;

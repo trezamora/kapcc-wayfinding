@@ -1,12 +1,12 @@
 /* BASE COLORS */
 body {
-    color: $color-text-body;
+    color: $color-neutral-light;
 }
 
 h1,
 h2,
 h3 {
-    color: $color-text-headings;
+    color: $color-neutral-light;
 }
 
 /* BASE TEXT FONTS */
@@ -20,7 +20,7 @@ body {
 h1,
 h2,
 h3 {
-    font-family: $font-family-serif;
+    font-family: $font-family-sans;
 }
 
 /* BASE TYPOGRAPHY */
@@ -74,20 +74,11 @@ p {
 /* LINKS */
 
 a {
-    color: $color-link;
+    color: $color-main-b2;
 
     &:hover {
-        color: $color-link-darker;
+        color: $color-main-b2;
     }
-}
-
-/* HORIZONTAL LINE */
-
-hr {
-    border: 0;
-    height: 1px;
-    background-color: rgba(0, 0, 0, .2);
-    margin: 3em 0;
 }
 
 /* TYPE SPECIMEN */
@@ -97,12 +88,12 @@ hr {
     font-weight: normal;
     line-height: 1;
     margin: 0;
-    color: $color-accent;
+    color: $color-main-b1;
 }
 
 .subheadline {
     font-weight: normal;
     font-size: 2.5rem;
     margin: .25em 0;
-    color: $color-light-accent;
+    color: $color-main-b3;
 }
