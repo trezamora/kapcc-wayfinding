@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>My Personal Framework</title>
+    <title>KapCC Wayfinding Project</title>
     <meta name="description" content="This is my Sassy Base site" />
 
     <!-- FOR MOBILE / SMALL SCREENS -->
@@ -20,44 +20,40 @@
 </head>
 
 <body>
-
     <header class="site-header">
-
-        <div class="site-id">
-            <div class="logo">
-                <a href="#"><img src="img/tzdlogowht.png" alt="TZD Square Logo" srcset="">
-            </div></a>
-            <a href="#">
-                <h1 class="hide-visually"><a href="#">My Framework</h1>
-            </a>
+        <div class="bar-nav">
+            <nav class="nav-controls">
+                <h2>Wayfinding</h2>
+                <ul>
+                    <li>
+                        <a href="#">Campus</a>
+                        <a href="#">Culture</a>
+                        <a href="#">Design</a>
+                        <a href="#">Database</a>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="nav-controls">
+                <h2>Affiliations</h2>
+                <ul>
+                    <li>
+                        <a href="#">About TeeZee</a>
+                        <a href="#">About NMA</a>
+                        <a href="#">About SURE</a>
+                        <a href="#">About KapCC</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-
-        <nav class="site-nav" data-navstate="closed">
-            <button class="menu-button"><span class="hide-visually">Menu</span>
-                <svg width="30" height="30">
-                    <title>Menu</title>
-                    <rect id="bar-top" y="0" width="30" height="3"></rect>
-                    <rect id="bar-middle" y="8" width="30" height="3"></rect>
-                    <rect id="bar-botton" y="16" width="30" height="3"></rect>
-                </svg>
-            </button>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">Subpage</a></li>
-            </ul>
-        </nav>
-
     </header>
 
     <main class="site-main">
 
         <section class="hero animate-on-scroll">
             <div class="container">
-                <h1>Tre Zamora's Framework</h1>
-                <p>This is a simple, multipage website, built with SASS</p>
+                <h1>KapCC Wayfinding Project</h1>
+                <p>Hero for wayfinding project</p>
                 <a href="#section1" class="button">Go to Section 1</a>
-                <a href="#section2" class="button">Go to Section 2</a>
-                <a href="#section3" class="button">Go to Section 3</a>
             </div>
         </section>
 
@@ -123,15 +119,6 @@
             </div>
         </section>
     </main>
-
-    <footer class="site-footer">
-        <nav class="site-nav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="subpade.html">Subpage</a></li>
-            </ul>
-        </nav>
-    </footer>
 
     <!-- SMOOTH SCROLL JS FILE CHRIS F -->
     <script src="js/smooth-scroll.polyfills.min.js"></script>

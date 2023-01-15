@@ -1,108 +1,39 @@
-/* SITE-HEADER SITE-NAV */
+/* SITE-HEADER SITE-NAV SITE-NAV */
+/* SITE STRUCTURE */
 
-.site-header .site-nav {
+.site-header {
 
-    .menu-button {
-        position: absolute;
-        top: .5em;
-        right: .5em;
-        color: white;
-        margin: 0;
-        font-size: 1.5rem;
-        line-height: 1;
-        z-index: 20;
-        cursor: pointer;
-        background-color: transparent;
-        border: none;
-
-        svg {
-            fill: white;
-
-            rect {
-                transition: 300ms ease-out;
-            }
-        }
-
-    }
-
-    ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        background-color: rgba(0, 51, 0, .9);
+    .bar-nav {
+        width: 15%;
+        min-height: 100vh;
         position: fixed;
-        top: 0;
-        right: 0;
-        width: 100%;
-        height: 100vh;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        transform: translate(0, 100%);
-        transition: all 350ms ease-out;
-        z-index: 1;
-    }
+        justify-content: space-between;
+        background-color: rgba(246, 246, 246, 1);
+        padding-top: 2em;
 
-    li {
-        font-size: 8vw;
-        min-width: 30vw;
-        transform: translate(0, -10%);
-        transition: all 300ms ease-out 500ms;
-        opacity: 0;
-    }
-
-    #bar-top,
-    #bar-middle,
-    #bar-bottom {
-        transform-origin: center;
-    }
-
-    &[data-navstate="open"] {
-
-        .menu-button {
-            position: fixed;
+        nav ul {
+            padding: 0;
         }
 
-        #bar-top {
-            transform-origin: center;
-            transform: translate(7px, 7px) rotate(-45deg);
+        nav li {
+            list-style: none;
         }
 
-        #bar-middle {
-            opacity: 0;
+        nav li a {
+            text-decoration: none;
+            color: $color-text-headings;
+            display: block;
+            padding: 1em 0;
+            font-weight: 400;
+            transition: all ease-out 250ms;
         }
 
-        #bar-botton {
-            transform-origin: center;
-            transform: translate(0, -4px) rotate(45deg);
+        nav li a:hover {
+            color: $color-dark-accent;
         }
-
-        ul {
-            transform: translate(0, 0);
-        }
-
-        li {
-            transform: translate(0, 0);
-            opacity: 1;
-        }
-    }
-
-}
-
-/* FOOTER SITE NAV */
-
-.site-footer .site-nav {
-    ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        display: flex;
-    }
-
-    a {
-        display: inline-block;
-        padding: 0 1em;
-        line-height: 1;
     }
 }

@@ -1,16 +1,3 @@
-// OVERLAY NAV MENU DRAWER
-
-const mymenubutton = document.querySelector('.menu-button');
-const mysitenav = document.querySelector('.site-header .site-nav');
-
-mymenubutton.onclick = function () {
-    if (mysitenav.getAttribute('data-navstate') === 'open') {
-        mysitenav.setAttribute('data-navstate', 'closed');
-    } else {
-        mysitenav.setAttribute('data-navstate', 'open');
-    }
-}
-
 // SCROLL TRIGGER ANIMATION
 // CHANGE ACTIVE STATE FOR ALL SECTIONS WITH INTERSECTION OBSERVER
 
