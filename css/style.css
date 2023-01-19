@@ -316,6 +316,49 @@ section:nth-of-type(5n) {
   background-color: rgb(142, 202, 230);
 }
 
+@media (min-width: 782px) {
+  .overlap {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+.overlap .text-overlap,
+.overlap .one-half:last-child {
+  background-color: #ddd;
+  padding: 2em;
+  margin-left: -4em;
+  position: relative;
+  z-index: 10;
+  border-radius: 0 30px;
+  -webkit-box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.overlap.swap {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.overlap.swap .one-half-column:last-child {
+  margin-left: 0;
+  margin-right: -4em;
+}
+
+#section3 {
+  background-image: url(../img/kcc-campus.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#section3 .text-box {
+  background-color: rgb(2, 48, 71);
+  padding: 8em;
+  text-align: center;
+}
+
 /* TO HIDE SOMETHING VISUALLY */
 .hide-visually {
   position: absolute;
