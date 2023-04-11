@@ -57,20 +57,19 @@
     <main class="site-main">
         <div class="main-content">
             <div id="fullpage">
-                <section id="hero" class="hero section animate-on-scroll">
-                    <div class="container">
+                <section id="hero" class="hero section animate-on-scroll onscroll-wipe">
+                    <div class="container home-page">
                         <h1>KapCC Wayfinding Project</h1>
                         <p>Hero for wayfinding project</p>
                         <a href="#section1" class="button">Go to Section 1</a>
                     </div>
                 </section>
 
-                <section id="section1" class="section animate-on-scroll">
-                    <div class="container">
+                <section id="section1" class="section animate-on-scroll onscroll-wipe">
+                    <div class="container home-page">
                         <div class="row swap">
                             <div class="one-half animate-drop-delay">
-                                <img src="img/placeholder-1500x1500.gif" width="1500" height="1500" alt="Placeholder"
-                                    srcset="">
+                                <img src="img/kcc-campus.jpeg" width="1500" height="1500" alt="Placeholder" srcset="">
                             </div>
                             <div class="one-half text-overlap">
                                 <h3>Kula Nui Kaiāulu ʻo Kapiʻolani Hōʻoia ʻĀina</h3>
@@ -84,12 +83,11 @@
                     </div>
                 </section>
 
-                <section id="section2" class="section animate-on-scroll">
-                    <div class="container">
+                <section id="section2" class="section animate-on-scroll onscroll-wipe">
+                    <div class="container home-page">
                         <div class="row">
                             <div class="one-half animate-drop-delay">
-                                <img src="img/placeholder-1500x1500.gif" width="1500" height="1500" alt="Placeholder"
-                                    srcset="">
+                                <img src="img/kcc-campus.jpeg" width="1500" height="1500" alt="Placeholder" srcset="">
                             </div>
                             <div class="one-half">
                                 <h3>Project Background</h3>
@@ -106,8 +104,8 @@
                     </div>
                 </section>
 
-                <section id="section3" class="section animate-on-scroll">
-                    <div class="container">
+                <section id="section3" class="section animate-on-scroll onscroll-wipe">
+                    <div class="container home-page">
                         <div class="text-box">
                             <div class="row">
                                 <div class="one-whole">
@@ -140,6 +138,17 @@
 
     <!-- FULL PAGE JS ALVAROTTRIGO  -->
     <script src="js/fullpage.min.js"></script>
+    <script>
+        // FULLPAGE INIT
+        new fullpage('#fullpage', {
+            licenseKey: 'gplv3-license',
+            //options here
+            scrollingSpeed: 700,
+            autoScrolling: true,
+            navigation: true,
+        });
+        fullpage_api.setScrollingSpeed(2000);
+    </script>
 
     <!-- MAIN JAVASCRIPT -->
     <script src="js/script.js"></script>

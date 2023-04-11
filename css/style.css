@@ -571,3 +571,34 @@ section:nth-of-type(5n) {
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
 }
+
+.onscroll-wipe .home-page > * {
+  -webkit-transition: all 500ms cubic-bezier(0, 1, 1, 1);
+  transition: all 500ms cubic-bezier(0, 1, 1, 1);
+  -webkit-transition-delay: 250ms;
+          transition-delay: 250ms;
+  opacity: 0;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+}
+
+/* .onscroll-wipe:nth-child(even) .nma-sectionwrapper > * {
+    transform: translateY(20px);
+  } */
+[data-sectionstate=active].onscroll-wipe .home-page > * {
+  opacity: 1;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  -webkit-transition-delay: 1.95s;
+          transition-delay: 1.95s;
+}
+
+[data-sectionstate=active].onscroll-wipe .home-page > *:nth-child(1) {
+  -webkit-transition-delay: 1.75s;
+          transition-delay: 1.75s;
+}
+
+[data-sectionstate=active].onscroll-wipe .home-page > *:nth-child(2) {
+  -webkit-transition-delay: 1.85s;
+          transition-delay: 1.85s;
+}
