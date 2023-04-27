@@ -2,7 +2,7 @@
 
 .hero {
     color: $color-neutral-light;
-    background: $color-main-b4;
+    // background: $color-main-b4;
     display: grid;
     text-align: center;
     place-items: center;
@@ -21,6 +21,28 @@
     }
 }
 
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.hero video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.section video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
 /* SECTION */
 
 .main-content {
@@ -29,7 +51,6 @@
 }
 
 section {
-    background-color: $color-neutral-light;
     height: 100vh;
     margin: auto 0;
     padding: 6em 0;
@@ -37,21 +58,25 @@ section {
     place-items: center;
 }
 
-section:nth-of-type(2n) {
-    background-color: $color-main-b1;
-}
+// section:nth-of-type(2n) {
+//     background-color: $color-main-b1;
+// }
 
-section:nth-of-type(3n) {
-    background-color: $color-main-b2;
-}
+// section:nth-of-type(3n) {
+//     background-color: $color-main-b2;
+// }
 
-section:nth-of-type(4n) {
-    background-color: $color-main-b3;
-}
+// section:nth-of-type(4n) {
+//     background-color: $color-main-b3;
+// }
 
-section:nth-of-type(5n) {
-    background-color: $color-main-b4;
-}
+// section:nth-of-type(5n) {
+//     background-color: $color-main-b4;
+// }
+
+// section:nth-of-type(6n) {
+//     background-color: $color-main-b3;
+// }
 
 @media (min-width: 782px) {
     .overlap {
@@ -80,10 +105,10 @@ section:nth-of-type(5n) {
 }
 
 #section3 {
-    background-image: url(../img/kcc-campus.jpeg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    // background-image: url(../img/kcc-campus.jpeg);
+    // background-repeat: no-repeat;
+    // background-position: center;
+    // background-size: cover;
 
     .text-box {
         background-color: $color-main-b1;

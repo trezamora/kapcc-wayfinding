@@ -264,7 +264,6 @@ body {
 /* HERO SECTION */
 .hero {
   color: rgb(244, 244, 245);
-  background: rgb(142, 202, 230);
   display: -ms-grid;
   display: grid;
   text-align: center;
@@ -284,6 +283,30 @@ body {
   margin: 1em auto;
 }
 
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.hero video {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.section video {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 /* SECTION */
 .main-content {
   margin-left: 250px;
@@ -291,29 +314,12 @@ body {
 }
 
 section {
-  background-color: rgb(244, 244, 245);
   height: 100vh;
   margin: auto 0;
   padding: 6em 0;
   display: -ms-grid;
   display: grid;
   place-items: center;
-}
-
-section:nth-of-type(2n) {
-  background-color: rgb(2, 48, 71);
-}
-
-section:nth-of-type(3n) {
-  background-color: rgb(0, 84, 164);
-}
-
-section:nth-of-type(4n) {
-  background-color: rgb(33, 158, 188);
-}
-
-section:nth-of-type(5n) {
-  background-color: rgb(142, 202, 230);
 }
 
 @media (min-width: 782px) {
@@ -347,12 +353,6 @@ section:nth-of-type(5n) {
   margin-right: -4em;
 }
 
-#section3 {
-  background-image: url(../img/kcc-campus.jpeg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
 #section3 .text-box {
   background-color: rgb(2, 48, 71);
   padding: 8em;
@@ -572,20 +572,18 @@ section:nth-of-type(5n) {
           transform: translate(0, 0);
 }
 
-.onscroll-wipe .home-page > * {
+/* SWIPE TRANSISTION ANIAMTION */
+.onscroll-wipe .nma-sectionwrapper > * {
   -webkit-transition: all 500ms cubic-bezier(0, 1, 1, 1);
   transition: all 500ms cubic-bezier(0, 1, 1, 1);
-  -webkit-transition-delay: 250ms;
-          transition-delay: 250ms;
+  -webkit-transition-delay: 3s;
+          transition-delay: 3s;
   opacity: 0;
   -webkit-transform: translateY(20px);
           transform: translateY(20px);
 }
 
-/* .onscroll-wipe:nth-child(even) .nma-sectionwrapper > * {
-    transform: translateY(20px);
-  } */
-[data-sectionstate=active].onscroll-wipe .home-page > * {
+[data-sectionstate=active].onscroll-wipe .nma-sectionwrapper > * {
   opacity: 1;
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
@@ -593,12 +591,165 @@ section:nth-of-type(5n) {
           transition-delay: 1.95s;
 }
 
-[data-sectionstate=active].onscroll-wipe .home-page > *:nth-child(1) {
-  -webkit-transition-delay: 1.75s;
-          transition-delay: 1.75s;
+[data-sectionstate=active].onscroll-wipe .nma-sectionwrapper > *:nth-child(1) {
+  -webkit-transition-delay: 2s;
+          transition-delay: 2s;
 }
 
-[data-sectionstate=active].onscroll-wipe .home-page > *:nth-child(2) {
-  -webkit-transition-delay: 1.85s;
-          transition-delay: 1.85s;
+[data-sectionstate=active].onscroll-wipe .nma-sectionwrapper > *:nth-child(2) {
+  -webkit-transition-delay: 2.25s;
+          transition-delay: 2.25s;
+}
+
+[data-sectionstate=active].onscroll-wipe .nma-sectionwrapper > *:nth-child(3) {
+  -webkit-transition-delay: 2.55s;
+          transition-delay: 2.55s;
+}
+
+.onscroll-wipe::before,
+.onscroll-wipe::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  -webkit-transition: all 1s cubic-bezier(0, 0.5, 0.5, 1);
+  transition: all 1s cubic-bezier(0, 0.5, 0.5, 1);
+  -webkit-transition-delay: 0.95s;
+          transition-delay: 0.95s;
+  background-color: white;
+}
+
+[data-sectionstate=active].onscroll-wipe::before {
+  top: 0;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+
+[data-sectionstate=active].onscroll-wipe::after {
+  top: 50%;
+  -webkit-transition-delay: 1.25s;
+          transition-delay: 1.25s;
+}
+
+[data-sectionstate=active].onscroll-wipe::before,
+[data-sectionstate=active].onscroll-wipe::after {
+  left: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+[data-sectionstate=active].onscroll-wipe:nth-child(even)::before,
+[data-sectionstate=active].onscroll-wipe:nth-child(even)::after {
+  right: 0;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.nma-sectionwrapper {
+  padding: 2em;
+  opacity: 0;
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+[data-sectionstate=active].onscroll-wipe .nma-sectionwrapper {
+  -webkit-animation-name: scale-fromleft;
+          animation-name: scale-fromleft;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: cubic-bezier(0, 0.5, 0, 1);
+          animation-timing-function: cubic-bezier(0, 0.5, 0, 1);
+}
+
+@-webkit-keyframes scale-fromleft {
+  0% {
+    -webkit-transform: scale(0.7) translateX(-50%);
+            transform: scale(0.7) translateX(-50%);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: scale(0.7) translateX(0px);
+            transform: scale(0.7) translateX(0px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1) translateX(0px);
+            transform: scale(1) translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes scale-fromleft {
+  0% {
+    -webkit-transform: scale(0.7) translateX(-50%);
+            transform: scale(0.7) translateX(-50%);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: scale(0.7) translateX(0px);
+            transform: scale(0.7) translateX(0px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1) translateX(0px);
+            transform: scale(1) translateX(0px);
+    opacity: 1;
+  }
+}
+[data-sectionstate=active].onscroll-wipe:nth-child(odd) .nma-sectionwrapper {
+  -webkit-animation-name: scale-fromright;
+          animation-name: scale-fromright;
+}
+
+@-webkit-keyframes scale-fromright {
+  0% {
+    -webkit-transform: scale(0.7) translateX(50%);
+            transform: scale(0.7) translateX(50%);
+    opacity: 1;
+  }
+  40% {
+    -webkit-transform: scale(0.7) translateX(0px);
+            transform: scale(0.7) translateX(0px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1) translateX(0px);
+            transform: scale(1) translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes scale-fromright {
+  0% {
+    -webkit-transform: scale(0.7) translateX(50%);
+            transform: scale(0.7) translateX(50%);
+    opacity: 1;
+  }
+  40% {
+    -webkit-transform: scale(0.7) translateX(0px);
+            transform: scale(0.7) translateX(0px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1) translateX(0px);
+            transform: scale(1) translateX(0px);
+    opacity: 1;
+  }
 }
