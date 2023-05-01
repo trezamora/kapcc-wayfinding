@@ -31,7 +31,7 @@
         }
     }
 
-    &[data-sectionstate="active"] {
+    &.active {
 
         .container * {
             opacity: 1;
@@ -49,7 +49,7 @@
         transform: translate(-50px, 0);
     }
 
-    &[data-sectionstate="active"] {
+    &.active {
 
         .one-half:nth-child(1) {
             transform: translate(0, 0);
@@ -62,7 +62,7 @@
         transform: translate(50px, 0);
     }
 
-    &[data-sectionstate="active"] {
+    &.active {
 
         .one-half:nth-child(2) {
             transform: translate(0, 0);
@@ -79,7 +79,7 @@
         transform: translate(-50px, -50px);
     }
 
-    &[data-sectionstate="active"] {
+    &.active {
 
         .one-half:nth-child(1) {
             transform: translate(0, 0);
@@ -92,7 +92,7 @@
         transform: translate(50px, 50px);
     }
 
-    &[data-sectionstate="active"] {
+    &.active {
 
         .one-half:nth-child(2) {
             transform: translate(0, 0);
@@ -112,7 +112,7 @@
     transform: scale(0.9);
 }
 
-[data-sectionstate="active"] .animate-scale-in {
+.active .animate-scale-in {
     opacity: 1;
     transform: scale(1);
 }
@@ -124,7 +124,7 @@
     transform: translate(0, 50px);
 }
 
-[data-sectionstate="active"] .animate-slide-up {
+.active .animate-slide-up {
     opacity: 1;
     transform: translate(0, 0);
 }
@@ -160,7 +160,7 @@
     }
 }
 
-[data-sectionstate="active"] .animate-drop-delay {
+.active .animate-drop-delay {
 
     * {
         opacity: 1;
@@ -177,22 +177,22 @@
     transform: translateY(20px);
 }
 
-[data-sectionstate="active"].onscroll-wipe .nma-sectionwrapper>* {
+.active.onscroll-wipe .nma-sectionwrapper>* {
     opacity: 1;
     transform: translateY(0%);
     transition-delay: 1.95s;
     // border: 5px solid red;
 }
 
-[data-sectionstate="active"].onscroll-wipe .nma-sectionwrapper>*:nth-child(1) {
+.active.onscroll-wipe .nma-sectionwrapper>*:nth-child(1) {
     transition-delay: 2s;
 }
 
-[data-sectionstate="active"].onscroll-wipe .nma-sectionwrapper>*:nth-child(2) {
+.active.onscroll-wipe .nma-sectionwrapper>*:nth-child(2) {
     transition-delay: 2.25s;
 }
 
-[data-sectionstate="active"].onscroll-wipe .nma-sectionwrapper>*:nth-child(3) {
+.active.onscroll-wipe .nma-sectionwrapper>*:nth-child(3) {
     transition-delay: 2.55s;
 }
 
@@ -203,32 +203,40 @@
     width: 100%;
     height: 50%;
     transition: all 1s cubic-bezier(0, .5, .5, 1);
-    transition-delay: .95s;
+    transition-delay: .5s;
     background-color: white;
+    transform: translateX(0);
+    z-index: 1;
 }
 
 // SECTIONS TOP SWIPE
-[data-sectionstate="active"].onscroll-wipe::before {
+.active.onscroll-wipe::before {
     top: 0;
     transition-delay: 1s;
+    // transition: all 1s cubic-bezier(0, .5, .5, 1);
 }
 
 // SECTIONS BOTTOM SWIPE
-[data-sectionstate="active"].onscroll-wipe::after {
+.active.onscroll-wipe::after {
     top: 50%;
     transition-delay: 1.25s;
+    // transition: all 1s cubic-bezier(0, .5, .5, 1);
 }
 
-[data-sectionstate="active"].onscroll-wipe::before,
-[data-sectionstate="active"].onscroll-wipe::after {
+// SECTIONS LEFT SWIPE
+.active.onscroll-wipe:nth-child(odd)::before,
+.active.onscroll-wipe:nth-child(odd)::after {
     left: 0;
     transform: translateX(-100%);
+    border: 5px solid green;
 }
 
-[data-sectionstate="active"].onscroll-wipe:nth-child(even)::before,
-[data-sectionstate="active"].onscroll-wipe:nth-child(even)::after {
-    right: 0;
+// SECTIONS RIGHT SWIPE
+.active.onscroll-wipe:nth-child(even)::before,
+.active.onscroll-wipe:nth-child(even)::after {
+    left: 0;
     transform: translateX(100%);
+    border: 5px solid red;
 }
 
 .nma-sectionwrapper {
@@ -243,7 +251,7 @@
 }
 
 // SECTION 1 BOX PUSH IN
-[data-sectionstate="active"].onscroll-wipe .nma-sectionwrapper {
+.active.onscroll-wipe .nma-sectionwrapper {
     animation-name: scale-fromleft;
     animation-duration: 1.5s;
     animation-delay: 2s;
@@ -268,7 +276,7 @@
     }
 }
 
-[data-sectionstate="active"].onscroll-wipe:nth-child(odd) .nma-sectionwrapper {
+.active.onscroll-wipe:nth-child(odd) .nma-sectionwrapper {
     animation-name: scale-fromright;
 }
 
