@@ -224,17 +224,17 @@
 }
 
 // SECTIONS LEFT SWIPE
-.active.onscroll-wipe:nth-child(odd)::before,
-.active.onscroll-wipe:nth-child(odd)::after {
+.active.wipe-left::before,
+.active.wipe-left::after {
     left: 0;
     transform: translateX(-100%);
     border: 5px solid green;
 }
 
 // SECTIONS RIGHT SWIPE
-.active.onscroll-wipe:nth-child(even)::before,
-.active.onscroll-wipe:nth-child(even)::after {
-    left: 0;
+.active.wipe-right::before,
+.active.wipe-right::after {
+    right: 0;
     transform: translateX(100%);
     border: 5px solid red;
 }
@@ -251,7 +251,7 @@
 }
 
 // SECTION 1 BOX PUSH IN
-.active.onscroll-wipe .nma-sectionwrapper {
+.active.wipe-left .nma-sectionwrapper {
     animation-name: scale-fromleft;
     animation-duration: 1.5s;
     animation-delay: 2s;
@@ -276,10 +276,18 @@
     }
 }
 
-.active.onscroll-wipe:nth-child(odd) .nma-sectionwrapper {
-    animation-name: scale-fromright;
-}
+// .active.onscroll-wipe:nth-child(even) .nma-sectionwrapper {
+//     animation-name: scale-fromright;
+// }
 
+// SECTION 1 BOX PUSH IN
+.active.wipe-right .nma-sectionwrapper {
+    animation-name: scale-fromright;
+    animation-duration: 1.5s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0, .5, 0, 1);
+}
 
 @keyframes scale-fromright {
     0% {

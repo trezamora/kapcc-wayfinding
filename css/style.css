@@ -634,17 +634,17 @@ section {
           transition-delay: 1.25s;
 }
 
-.active.onscroll-wipe:nth-child(odd)::before,
-.active.onscroll-wipe:nth-child(odd)::after {
+.active.wipe-left::before,
+.active.wipe-left::after {
   left: 0;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
   border: 5px solid green;
 }
 
-.active.onscroll-wipe:nth-child(even)::before,
-.active.onscroll-wipe:nth-child(even)::after {
-  left: 0;
+.active.wipe-right::before,
+.active.wipe-right::after {
+  right: 0;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
   border: 5px solid red;
@@ -670,7 +670,7 @@ section {
           align-items: center;
 }
 
-.active.onscroll-wipe .nma-sectionwrapper {
+.active.wipe-left .nma-sectionwrapper {
   -webkit-animation-name: scale-fromleft;
           animation-name: scale-fromleft;
   -webkit-animation-duration: 1.5s;
@@ -718,9 +718,17 @@ section {
     opacity: 1;
   }
 }
-.active.onscroll-wipe:nth-child(odd) .nma-sectionwrapper {
+.active.wipe-right .nma-sectionwrapper {
   -webkit-animation-name: scale-fromright;
           animation-name: scale-fromright;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: cubic-bezier(0, 0.5, 0, 1);
+          animation-timing-function: cubic-bezier(0, 0.5, 0, 1);
 }
 
 @-webkit-keyframes scale-fromright {
