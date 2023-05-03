@@ -212,14 +212,14 @@
 // SECTIONS TOP SWIPE
 .active.onscroll-wipe::before {
     top: 0;
-    transition-delay: 1s;
+    transition-delay: 1.25s;
     // transition: all 1s cubic-bezier(0, .5, .5, 1);
 }
 
 // SECTIONS BOTTOM SWIPE
 .active.onscroll-wipe::after {
     top: 50%;
-    transition-delay: 1.25s;
+    transition-delay: 1.15s;
     // transition: all 1s cubic-bezier(0, .5, .5, 1);
 }
 
@@ -228,7 +228,7 @@
 .active.wipe-left::after {
     left: 0;
     transform: translateX(-100%);
-    border: 5px solid green;
+    // border: 5px solid green;
 }
 
 // SECTIONS RIGHT SWIPE
@@ -236,7 +236,7 @@
 .active.wipe-right::after {
     right: 0;
     transform: translateX(100%);
-    border: 5px solid red;
+    // border: 5px solid red;
 }
 
 .nma-sectionwrapper {
