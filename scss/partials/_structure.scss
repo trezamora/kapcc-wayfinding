@@ -2,14 +2,12 @@
 
 .hero {
     color: $color-neutral-light;
-    // background: $color-main-b4;
-    display: grid;
+    display: flex;
     text-align: center;
     place-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: auto 0;
-    padding: 6em 0;
 
     h1 {
         margin-bottom: .25em;
@@ -51,68 +49,27 @@
 }
 
 section {
-    height: 100vh;
-    margin: auto 0;
-    padding: 6em 0;
-    display: grid;
-    place-items: center;
-}
-
-// section:nth-of-type(2n) {
-//     background-color: $color-main-b1;
-// }
-
-// section:nth-of-type(3n) {
-//     background-color: $color-main-b2;
-// }
-
-// section:nth-of-type(4n) {
-//     background-color: $color-main-b3;
-// }
-
-// section:nth-of-type(5n) {
-//     background-color: $color-main-b4;
-// }
-
-// section:nth-of-type(6n) {
-//     background-color: $color-main-b3;
-// }
-
-@media (min-width: 782px) {
-    .overlap {
-        align-items: center;
-    }
-}
-
-.overlap .text-overlap,
-.overlap .one-half:last-child {
-    background-color: #ddd;
-    padding: 2em;
-    margin-left: -4em;
     position: relative;
-    z-index: 10;
-    border-radius: 0 30px;
-    box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.5);
+    min-height: 100vh;
+    margin: auto 0;
+    // padding: 6em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.overlap.swap {
-    flex-direction: row-reverse;
+/* WRAPPER + CONTAINER */
+
+.nma-sectionwrapper {
+    opacity: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.overlap.swap .one-half-column:last-child {
-    margin-left: 0;
-    margin-right: -4em;
-}
-
-#section3 {
-    // background-image: url(../img/kcc-campus.jpeg);
-    // background-repeat: no-repeat;
-    // background-position: center;
-    // background-size: cover;
-
-    .text-box {
-        background-color: $color-main-b1;
-        padding: 8em;
-        text-align: center;
-    }
+.nma-container {
+    max-width: 1200px;
+    margin: 0 auto;
 }

@@ -264,16 +264,16 @@ body {
 /* HERO SECTION */
 .hero {
   color: rgb(244, 244, 245);
-  display: -ms-grid;
-  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   text-align: center;
   place-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   margin: auto 0;
-  padding: 6em 0;
 }
 .hero h1 {
   margin-bottom: 0.25em;
@@ -314,49 +314,42 @@ body {
 }
 
 section {
-  height: 100vh;
-  margin: auto 0;
-  padding: 6em 0;
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
-}
-
-@media (min-width: 782px) {
-  .overlap {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-.overlap .text-overlap,
-.overlap .one-half:last-child {
-  background-color: #ddd;
-  padding: 2em;
-  margin-left: -4em;
   position: relative;
-  z-index: 10;
-  border-radius: 0 30px;
-  -webkit-box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.5);
-          box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.5);
+  min-height: 100vh;
+  margin: auto 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.overlap.swap {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+/* WRAPPER + CONTAINER */
+.nma-sectionwrapper {
+  opacity: 0;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.overlap.swap .one-half-column:last-child {
-  margin-left: 0;
-  margin-right: -4em;
-}
-
-#section3 .text-box {
-  background-color: rgb(2, 48, 71);
-  padding: 8em;
-  text-align: center;
+.nma-container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* TO HIDE SOMETHING VISUALLY */
@@ -455,48 +448,6 @@ section {
 .hero.active .container *,
 .hero[data-sectionstate=inactive].active .container * {
   opacity: 1;
-  -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
-}
-
-#section1 .one-half:nth-child(1) {
-  -webkit-transition: all 1250ms ease-out;
-  transition: all 1250ms ease-out;
-  -webkit-transform: translate(-50px, 0);
-          transform: translate(-50px, 0);
-}
-#section1.active .one-half:nth-child(1) {
-  -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
-}
-#section1 .one-half:nth-child(2) {
-  -webkit-transition: all 1250ms ease-out;
-  transition: all 1250ms ease-out;
-  -webkit-transform: translate(50px, 0);
-          transform: translate(50px, 0);
-}
-#section1.active .one-half:nth-child(2) {
-  -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
-}
-
-#section2 .one-half:nth-child(1) {
-  -webkit-transition: all 1250ms ease-out;
-  transition: all 1250ms ease-out;
-  -webkit-transform: translate(-50px, -50px);
-          transform: translate(-50px, -50px);
-}
-#section2.active .one-half:nth-child(1) {
-  -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
-}
-#section2 .one-half:nth-child(2) {
-  -webkit-transition: all 1250ms ease-out;
-  transition: all 1250ms ease-out;
-  -webkit-transform: translate(50px, 50px);
-          transform: translate(50px, 50px);
-}
-#section2.active .one-half:nth-child(2) {
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
 }
@@ -646,26 +597,6 @@ section {
   right: 0;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
-}
-
-.nma-sectionwrapper {
-  padding: 2em;
-  opacity: 0;
-  width: 100%;
-  min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .active.wipe-left .nma-sectionwrapper {

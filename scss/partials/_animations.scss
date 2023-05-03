@@ -41,65 +41,65 @@
 
 }
 
-#section1 {
+// #section1 {
 
-    // SECTION 1 FIRST COLUMN ANIMATION
-    .one-half:nth-child(1) {
-        transition: all 1250ms ease-out;
-        transform: translate(-50px, 0);
-    }
+//     // SECTION 1 FIRST COLUMN ANIMATION
+//     .one-half:nth-child(1) {
+//         transition: all 1250ms ease-out;
+//         transform: translate(-50px, 0);
+//     }
 
-    &.active {
+//     &.active {
 
-        .one-half:nth-child(1) {
-            transform: translate(0, 0);
-        }
-    }
+//         .one-half:nth-child(1) {
+//             transform: translate(0, 0);
+//         }
+//     }
 
-    // SECTION 1 SECOND COLUMN ANIMATION
-    .one-half:nth-child(2) {
-        transition: all 1250ms ease-out;
-        transform: translate(50px, 0);
-    }
+//     // SECTION 1 SECOND COLUMN ANIMATION
+//     .one-half:nth-child(2) {
+//         transition: all 1250ms ease-out;
+//         transform: translate(50px, 0);
+//     }
 
-    &.active {
+//     &.active {
 
-        .one-half:nth-child(2) {
-            transform: translate(0, 0);
-        }
-    }
+//         .one-half:nth-child(2) {
+//             transform: translate(0, 0);
+//         }
+//     }
 
-}
+// }
 
-#section2 {
+// #section2 {
 
-    // SECTION 2 FIRST COLUMN ANIMATION
-    .one-half:nth-child(1) {
-        transition: all 1250ms ease-out;
-        transform: translate(-50px, -50px);
-    }
+//     // SECTION 2 FIRST COLUMN ANIMATION
+//     .one-half:nth-child(1) {
+//         transition: all 1250ms ease-out;
+//         transform: translate(-50px, -50px);
+//     }
 
-    &.active {
+//     &.active {
 
-        .one-half:nth-child(1) {
-            transform: translate(0, 0);
-        }
-    }
+//         .one-half:nth-child(1) {
+//             transform: translate(0, 0);
+//         }
+//     }
 
-    // SECTION 2 SECOND COLUMN ANIMATION
-    .one-half:nth-child(2) {
-        transition: all 1250ms ease-out;
-        transform: translate(50px, 50px);
-    }
+//     // SECTION 2 SECOND COLUMN ANIMATION
+//     .one-half:nth-child(2) {
+//         transition: all 1250ms ease-out;
+//         transform: translate(50px, 50px);
+//     }
 
-    &.active {
+//     &.active {
 
-        .one-half:nth-child(2) {
-            transform: translate(0, 0);
-        }
-    }
+//         .one-half:nth-child(2) {
+//             transform: translate(0, 0);
+//         }
+//     }
 
-}
+// }
 
 /* UTILITY / HELPER CLASSES FOR ANIMATION */
 
@@ -237,17 +237,6 @@
     right: 0;
     transform: translateX(100%);
     // border: 5px solid red;
-}
-
-.nma-sectionwrapper {
-    padding: 2em;
-    opacity: 0;
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 // SECTION 1 BOX PUSH IN
